@@ -459,11 +459,15 @@ extension LoginViewController {
     }
     
     @objc func loginButton(_ sender: UIButton) {
+        let vc = TabBarController()
         
+        self.present(vc, animated: true)
     }
     
     @objc func facebookLoginButton(_ sender: UIButton) {
+        let vc = TabBarController()
         
+        self.present(vc, animated: true)
     }
     
     @objc func signUpButton(_ sender: UIButton) {

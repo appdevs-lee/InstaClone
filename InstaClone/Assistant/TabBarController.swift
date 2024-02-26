@@ -15,24 +15,35 @@ class TabBarController: UITabBarController {
             self.previousSelectedIndex = oldValue
         }
     }
-
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.modalPresentationStyle = .fullScreen
+        self.modalTransitionStyle = .crossDissolve
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setUpTabBar(tabBar: tabBar)
         
-//        let homeVC = RenewalMainViewController()
-//        let travelVC = TravelMainViewController()\
-//        let liveVC = RenewalLiveViewController()
-//        let feedListVC = FeedListViewController()
-//        let profileVC = RenewalProfileViewController(isTabbarHidden: false)
+        let homeVC = HomeViewController()
+        let reelsVC = ReelsViewController()
+        let createVC = CreateViewController()
+        let heartVC = HeartViewController()
+        let profileVC = ProfileViewController()
         
         self.viewControllers = [
-//            self.createTabBarItem(tabBarTitle: "홈", tabBarImage: "Home", selectedImage: "SelectedHomeIcon", viewController: homeVC),
-//            self.createTabBarItem(tabBarTitle: "여행", tabBarImage: "Travel", selectedImage: "SelectedTravelIcon", viewController: travelVC),
-//            self.createTabBarItem(tabBarTitle: "라이브", tabBarImage: "DeselectedLiveIcon", selectedImage: "SelectedLiveIcon", viewController: liveVC),
-//            self.createTabBarItem(tabBarTitle: "피드", tabBarImage: "DeselectedFeedIcon", selectedImage: "SelectedFeedIcon", viewController: feedListVC),
-//            self.createTabBarItem(tabBarTitle: "프로필", tabBarImage: "Profile", selectedImage: "SelectedProfileIcon", viewController: profileVC)
+            self.createTabBarItem(tabBarTitle: "", tabBarImage: "Home", selectedImage: "SelectedHomeIcon", viewController: homeVC),
+            self.createTabBarItem(tabBarTitle: "", tabBarImage: "Reels", selectedImage: "Reels", viewController: reelsVC),
+            self.createTabBarItem(tabBarTitle: "", tabBarImage: "Create", selectedImage: "Create", viewController: createVC),
+            self.createTabBarItem(tabBarTitle: "", tabBarImage: "Heart", selectedImage: "SelectedHeartIcon", viewController: heartVC),
+            self.createTabBarItem(tabBarTitle: "", tabBarImage: "Profile", selectedImage: "SelectedProfileIcon", viewController: profileVC)
         ]
     }
     
@@ -56,8 +67,8 @@ class TabBarController: UITabBarController {
         let attributes = [NSAttributedString.Key.font: UIFont.useFont(ofSize: 12, weight: .Medium)]
         appearance.setTitleTextAttributes(attributes, for: .normal)
         
-        tabBar.layer.cornerRadius = 24
-        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        tabBar.layer.cornerRadius = 24
+//        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         tabBar.layer.borderWidth = 0
     }
