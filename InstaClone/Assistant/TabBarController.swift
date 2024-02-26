@@ -88,16 +88,16 @@ extension TabBarController: UITabBarControllerDelegate {
         
         if self.currentSelectedIndex == tabBarController.selectedIndex {
             if let naviVC = self.selectedViewController as? CustomizedNavigationController {
-                
+                print(naviVC)
             }
             
         if let naviVC = self.selectedViewController as? CustomizedNavigationController {
-                
+            print(naviVC)
             }
             
         } else {
             if let naviVC = self.selectedViewController as? CustomizedNavigationController {
-                
+                print(naviVC)
             }
         }
         

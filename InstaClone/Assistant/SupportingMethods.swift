@@ -991,7 +991,7 @@ extension SupportingMethods {
         var index = index
         let count = selectedIdentifiers.count
         var contentsData = contentsData
-        var url = url
+//        let url = url
         
         guard index < count else {
             DispatchQueue.main.async {
@@ -1388,7 +1388,7 @@ extension UIFont {
         case Thin
     }
     class func useFont(ofSize size: CGFloat, weight: PretendardFontType) -> UIFont {
-        return UIFont(name: "PretendardVariable-\(weight.rawValue)", size: size)!
+        return UIFont(name: "Pretendard-\(weight.rawValue)", size: size)!
     }
 }
 
