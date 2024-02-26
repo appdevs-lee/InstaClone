@@ -60,7 +60,7 @@ class TabBarController: UITabBarController {
     }
     
     func setUpTabBar(tabBar: UITabBar) {
-        tabBar.backgroundColor = UIColor.white
+        tabBar.backgroundColor = .useRGB(red: 250, green: 250, blue: 250)
         tabBar.tintColor = .useRGB(red: 151, green: 157, blue: 242)
         
         let appearance = UITabBarItem.appearance()
@@ -70,7 +70,8 @@ class TabBarController: UITabBarController {
 //        tabBar.layer.cornerRadius = 24
 //        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        tabBar.layer.borderWidth = 0
+        tabBar.layer.borderColor = UIColor.useRGB(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        tabBar.layer.borderWidth = 0.5
     }
     
     deinit {
