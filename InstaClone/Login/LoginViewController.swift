@@ -254,18 +254,24 @@ extension LoginViewController: EssentialViewMethods {
     func setSubviews() {
         SupportingMethods.shared.addSubviews([
             self.logoImageView,
+            
+            // MARK: idTextField 관련 Property
             self.idView,
             self.idTextField,
             self.idLabel,
             self.idButton,
+            
+            // MARK: passwordTextField 관련 Property
             self.passwordView,
             self.passwordTextField,
             self.passwordLabel,
             self.passwordButton,
             self.textFieldMaskButton,
+            
             self.findPasswordButton,
             self.loginButton,
             self.facebookLoginButton,
+            
             self.borderImageView,
             self.signUpLabel,
             self.signUpButton,
